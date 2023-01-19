@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+
+include 'config.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -103,13 +107,19 @@
           <p>Which address format do you want to save?</p>
           <div class="btn-group btn-toggle mb-3">
             <button id="originalBtn" class="btn btn-xs btn-success">ORIGINAL</button>
-            <button id="stBtn" class="btn btn-xs btn-default" >STANDARDRIZED (USPS)</button>
+            <button id="stBtn" class="btn btn-xs btn-default">STANDARDRIZED (USPS)</button>
           </div>
-          <pre  id="address_description_orignal" ></pre>
-          <pre  id="address_description_usps" class="collapse"></pre>
+          <pre id="address_description_orignal"></pre>
+          <pre id="address_description_usps" class="collapse"></pre>
+          <div id="success_message" class="alert alert-success" role="alert">
+            Address Saved Successfully.
+          </div>
+          <div id="fail_message" class="alert alert-danger" role="alert">
+            Address can't be saved.
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save</button>
+          <button id="saveBtn" type="button" class="btn btn-primary">Save</button>
         </div>
       </div>
     </div>
