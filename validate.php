@@ -1,9 +1,12 @@
 <?php
+include 'config.php';
+
 error_reporting(E_ERROR | E_PARSE);
 
 function validate($address_line1, $address_line2, $city, $state, $zipcode)
 {
-  $input_data = "<AddressValidateRequest USERID='620SH0001049'>
+  $USERID = constant("USPS_USERID");
+  $input_data = "<AddressValidateRequest USERID='$USERID'>
   <Revision>1</Revision>
   <Address ID='0'>
     <Address1>$address_line1</Address1>
